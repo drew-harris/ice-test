@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"io"
 	"os"
 
@@ -31,4 +32,6 @@ func main() {
 	defer w.Close()
 
 	io.Copy(w, f)
+
+	fmt.Println("Done")
 }
