@@ -1,0 +1,4 @@
+github.com/jdarnold/go-libshout v0.0.0-20131003095714-f1df49165861 h1:Z8zwzvZHt7BS2bcVAG0DTT3Pr39yXlLp4zeelbKRoSk=
+github.com/jdarnold/go-libshout v0.0.0-20131003095714-f1df49165861/go.mod h1:GIDpVlxFjuNPW5VIQRhOS95fdeTJ23gQx5gxgTBRyco=
+github.com/viert/shout v0.0.0-20190821111432-a954c3cef002 h1:fZNE7IvrmEYKXQIJT6lShbWSefglyziZbd3HAC/ZobE=
+github.com/viert/shout v0.0.0-20190821111432-a954c3cef002/go.mod h1:YAjso0lpbc8pPqNsw6q7KRI5vk+YzGsmukHq+yN81cc=
