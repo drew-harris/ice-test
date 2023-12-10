@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"io"
+	"net/http"
 	"os"
 
 	"github.com/viert/shout"
@@ -25,13 +26,29 @@ func main() {
 		Format:   shout.ShoutFormatMP3,
 	}
 
+	resp, err := http.Get("https://listen.mixlr.com/aaed1af462ac25481f18b15ed038912a")
+
+	if err != nil {
+		panic(err)
+	}
+
+	fmt.Println(resp.Status)
+
+	defer resp.Body.Close()
+
+	fmt.Println("Connected")
+
+	fmt.Println("Sending...")
+
 	w, err := shout.Connect(cfg)
 	if err != nil {
 		panic(err)
 	}
 	defer w.Close()
 
-	io.Copy(w, f)
+	_, err = io.Copy(w, resp.Body)
 
-	fmt.Println("Done")
+	if err != nil {
+		panic(err)
+	}
 }
